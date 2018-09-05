@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Menu, Icon } from 'antd';
+import { Menu } from 'antd';
 import MenuConfig from '../../config/menuConfig'
 import './index.less'
 
@@ -29,7 +29,7 @@ export default class NavLeft extends Component{
     return (
       <div>
         <div className="logo">
-          <img src="/assets/logo.gif" />
+          <img src="/assets/logo.gif" alt="加载失败"/>
           <h1>my Ms</h1>
         </div>
         <Menu theme="dark">
