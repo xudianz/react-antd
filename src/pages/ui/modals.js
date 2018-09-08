@@ -16,6 +16,19 @@ export default class Modals extends Component{
     })
   }
 
+  handleConfirm = (type) => {
+    Modal[type]({
+      title: '确认？',
+      content: '你确定学会了React了吗？',
+      onOk () {
+        console.log('ok')
+      },
+      onCancel () {
+        console.log('cancel')
+      }
+    })
+  }
+
   render () {
     return (
       <div>
@@ -24,6 +37,12 @@ export default class Modals extends Component{
           <Button type="primary" onClick={() => this.handleOpen('showModal2')}>自定义页脚</Button>
           <Button type="primary" onClick={() => this.handleOpen('showModal3')}>顶部20px弹框</Button>
           <Button type="primary" onClick={() => this.handleOpen('showModal4')}>水平垂直居中</Button>
+        </Card>
+        <Card title="信息确认框" className="card-wrapper">
+          <Button type="primary" onClick={() => this.handleConfirm('confirm')}>Confirm</Button>
+          <Button type="primary" onClick={() => this.handleConfirm('info')}>Info</Button>
+          <Button type="primary" onClick={() => this.handleConfirm('success')}>Success</Button>
+          <Button type="primary" onClick={() => this.handleConfirm('warning')}>Warning</Button>
         </Card>
         <Modal
           title="React"
@@ -60,6 +79,18 @@ export default class Modals extends Component{
           }}
         >
           <p>我的react弹框-距离顶部20px</p>
+        </Modal>
+        <Modal
+          title="React"
+          wrapClassName="vertical-center-modal"
+          visible={this.state.showModal4}
+          onCancel={() => {
+            this.setState({
+              showModal4: false
+            })
+          }}
+        >
+          <p>我的react弹框-水平垂直居中</p>
         </Modal>
       </div>
     )

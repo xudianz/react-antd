@@ -6,6 +6,12 @@ import Admin from './admin'
 import Button from './pages/ui/button'
 import Modal from './pages/ui/modals'
 import NoMatch from './pages/nomatch'
+import Loadings from './pages/ui/loadings'
+import Notification from './pages/ui/notification'
+import Messages from './pages/ui/message'
+import Tabs from './pages/ui/tabs'
+import Gallery from './pages/ui/gallery'
+import Carousels from './pages/ui/carousel'
 
 export default class IRouter extends Component{
   render () {
@@ -18,6 +24,12 @@ export default class IRouter extends Component{
               <Switch>
                 <Route path="/admin/ui/buttons" component={Button}/>
                 <Route path="/admin/ui/modals" component={Modal} />
+                <Route path="/admin/ui/loading" component={Loadings} />
+                <Route path="/admin/ui/notification" component={Notification} />
+                <Route path="/admin/ui/messages" component={Messages} />
+                <Route path="/admin/ui/tabs" component={Tabs} />
+                <Route path="/admin/ui/gallery" component={Gallery} />
+                <Route path="/admin/ui/carousel" component={Carousels}/>
                 <Route component={NoMatch} />
               </Switch>      
             </Admin>
