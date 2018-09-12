@@ -7,8 +7,8 @@ export default {
   },
   pagination (data, callback) {
     let page = {
-      onChange: (current) => {
-        callback(current)
+      onChange: (next) => {
+        callback(next) // 改变页码 执行回调
       },
       current: data.result.page,
       pageSize: data.result.page_size,

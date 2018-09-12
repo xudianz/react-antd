@@ -72,11 +72,10 @@ export default class Basic extends Component{
           dataSource2: res.result.list,
           selectedRowKeys: [],
           selectedRows: null,
-          pagination: Utils.pagination(res, (current) => {
+          pagination: Utils.pagination(res, (next) => {
             // 改变页码回调
-            _this.params.page = current
-            console.log(_this.params.page)
-            // this.request()
+            _this.params.page = next
+            this.request()
           })
         })
       }
