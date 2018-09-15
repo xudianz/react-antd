@@ -44,10 +44,11 @@ export default class ETable extends Component{
     if (row_selection === false || row_selection === null) {
       row_selection = false
     } else if (row_selection === 'checkbox') {
-      row_selection.type = 'cehckbox'
+      rowSelection.type = 'checkbox'
     } else {
       row_selection = 'radio'
     }
+    console.log(row_selection)
     return (
       <Table
         bordered

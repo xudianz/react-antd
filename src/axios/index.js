@@ -24,8 +24,15 @@ export default class Axios {
       loading = document.getElementById('ajaxLoading')
       loading.style.display = 'block'
     }
-    // const baseURL = 'https://www.easy-mock.com/mock/5b97376f74ae6d082f54e316/reactantdapi'
+    // let baseURL = ''
+    // if (options.isMock) {
+    //   baseURL = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api'
+    // } else {
+    //   baseURL = '真实地址'
+    // }
+
     const baseURL = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api'
+    // const baseURL = 'https://www.easy-mock.com/mock/5b97376f74ae6d082f54e316/reactantdapi'
     return new Promise((resolve, reject) => {
       axios({
         url: options.url,

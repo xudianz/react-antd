@@ -110,7 +110,6 @@ class BaseForm extends React.Component {
         return formItemList;
     }
     render () {
-        console.log(this.initFormList())
         return (
             <Form layout="inline">
                 {this.initFormList()}
