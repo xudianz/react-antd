@@ -48,7 +48,6 @@ export default class ETable extends Component{
     } else {
       row_selection = 'radio'
     }
-    console.log(row_selection)
     return (
       <Table
         bordered
